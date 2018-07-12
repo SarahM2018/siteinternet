@@ -1,0 +1,128 @@
+/*
+This is a Cascading Style Sheet (CSS).
+It describes rules for styling your HTML markup.
+
+To use this file, place the following <link> tag anywhere in the <head> of your HTML file, making sure that the filename after "href" matches the name of your file....
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+Learn more about CSS at https://developer.mozilla.org/en-US/docs/Web/Guide/CSS
+
+When you're done, you can delete all of this grey text, it's just a comment.
+*/
+
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color: rgb(196,240,191);
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: black;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+}
+
+.box {
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+  border-style: dotted;
+  border-color: black;
+  width: 500px;
+  margin: auto;
+}
+.box:nth-child(1) { order: 1; }
+.box:nth-child(2) { order: 2; }
+.box:nth-child(3) { order: 3; }
+
+.box1 {
+  position: relative;
+  text-align: justify;
+}
+
+.box2 {
+  text-align: justify;
+}
+
+.box3 {
+  text-align: justify;
+}
+
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 180px;
+}
+#menu-deroulant {
+/* on centre le menu dans la page */
+    text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    position: relative;
+}
+#menu-deroulant ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu-deroulant a {
+    text-decoration: none;
+    display: block;
+	color:#000;
+}
+#menu-deroulant ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+top: 0;
+    left: 180px;
+}
+#fb {
+  position: absolute;
+  display : block;
+  width : 100px;
+  height : 100px;
+  margin-left : auto;
+  margin-right : auto;
+  left : 0;
+  right : 0;
+  top : 600px;
+}
+
+#twitter {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 900px;
+  right: 100;
+  top: 600px;
+}
+
+#gmail {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 400px;
+  top: 600px;
+}
